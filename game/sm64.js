@@ -357,7 +357,7 @@ function getNativeTypeSize(type) {
 
 function warnOnce(text) {
   if (!warnOnce.shown) warnOnce.shown = {};
-  if (!warnOnce.shown[text]) {
+  if (!warnOnce.shown[]) {
     warnOnce.shown[text] = 1;
     err(text);
   }
