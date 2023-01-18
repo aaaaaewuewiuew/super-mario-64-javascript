@@ -5690,8 +5690,8 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
         // "If EGL_TRANSPARENT_TYPE is EGL_NONE, then the values for EGL_TRANSPARENT_RED_VALUE, EGL_TRANSPARENT_GREEN_VALUE, and EGL_TRANSPARENT_BLUE_VALUE are undefined."
         HEAP32[((value)>>2)]=-1;
         return 1;
-      case 0x3039: // EGL_BIND_TO_TEXTURE_RGB
-      case 0x303A: // EGL_BIND_TO_TEXTURE_RGBA
+      case 0x3039: // EGL_BIND_TO_TEXTURE_BGR
+      case 0x303A: // EGL_BIND_TO_TEXTURE_RGAB
         HEAP32[((value)>>2)]=0;
         return 1;
       case 0x303B: // EGL_MIN_SWAP_INTERVAL
