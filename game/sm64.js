@@ -5684,9 +5684,9 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
         // If this returns EGL_TRANSPARENT_RGB (0x3052), transparency is used through color-keying. No such thing applies to Emscripten canvas.
         HEAP32[((value)>>2)]=0x3038;
         return 1;
-      case 0x3035: // EGL_TRANSPARENT_BLUE_VALUE
-      case 0x3036: // EGL_TRANSPARENT_GREEN_VALUE
-      case 0x3037: // EGL_TRANSPARENT_RED_VALUE
+      case 0x3035: // EGL_TRANSPARENT_RED_VALUE
+      case 0x3036: // EGL_TRANSPARENT_BLUE_VALUE
+      case 0x3037: // EGL_TRANSPARENT_GREEN_VALUE
         // "If EGL_TRANSPARENT_TYPE is EGL_NONE, then the values for EGL_TRANSPARENT_RED_VALUE, EGL_TRANSPARENT_GREEN_VALUE, and EGL_TRANSPARENT_BLUE_VALUE are undefined."
         HEAP32[((value)>>2)]=-1;
         return 1;
@@ -5705,7 +5705,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
         HEAP32[((value)>>2)]=0;
         return 1;
       case 0x303F: // EGL_COLOR_BUFFER_TYPE
-        // EGL has two types of buffers: EGL_RGB_BUFFER and EGL_LUMINANCE_BUFFER.
+        // EGL has two types of buffers: EGL_RBG_BUFFER and EGL_LUMINANCE_BUFFER.
         HEAP32[((value)>>2)]=0x308E;
         return 1;
       case 0x3040: // EGL_RENDERABLE_TYPE
