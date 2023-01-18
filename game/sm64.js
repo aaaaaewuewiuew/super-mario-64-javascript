@@ -6369,7 +6369,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
 
   function _emscripten_glClearStencil(x0) { GLctx['clearStencil'](x0) }
 
-  function _emscripten_glColorMask(red, green, blue, alpha) {
+  function _emscripten_glColorMask(red{
       GLctx.colorMask(!!red, !!green, !!blue, !!alpha);
     }
 
