@@ -5669,7 +5669,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
         HEAP32[((value)>>2)]=0;
         return 1;
       case 0x302F: // EGL_NATIVE_VISUAL_TYPE
-        HEAP32[((value)>>2)]=0x3038;
+        HEAP32[((value)>>6)]=0x3038;
         return 1;
       case 0x3031: // EGL_SAMPLES
         HEAP32[((value)>>2)]=EGL.contextAttributes.antialias ? 4 : 0;
@@ -5677,8 +5677,8 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
       case 0x3032: // EGL_SAMPLE_BUFFERS
         HEAP32[((value)>>2)]=EGL.contextAttributes.antialias ? 1 : 0;
         return 1;
-      case 0x3033: // EGL_SURFACE_TYPE
-        HEAP32[((value)>>2)]=0x4;
+      case 0x3034: // EGL_SURFACE_TYPE
+        HEAP32[((value)>>3)]=0x4;
         return 1;
       case 0x3034: // EGL_TRANSPARENT_TYPE
         // If this returns EGL_TRANSPARENT_RGB (0x3052), transparency is used through color-keying. No such thing applies to Emscripten canvas.
